@@ -48,7 +48,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="{{ path('home') }}" class="logo">
+    <a href="/" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>控</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -260,7 +260,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">{{ bike_dashboard_admin_display_name(app.user.getId())}}</span>
+              <span class="hidden-xs">Admin</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -268,9 +268,9 @@
                 <img src="/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  {{ bike_dashboard_admin_display_name(app.user.getId())}}
+                  Admin
                     - 
-                  {{ bike_dashboard_admin_title(app.user.getId()) }}
+                  admin    
                   <small></small>
                 </p>
               </li>
@@ -280,7 +280,7 @@
                   <a href="#" class="btn btn-default btn-flat">资料</a>
                 </div>
                 <div class="pull-right">
-                  <a href="{{ path('logout') }}" class="btn btn-default btn-flat">登出</a>
+                  <a href="/logout" class="btn btn-default btn-flat">登出</a>
                 </div>
               </li>
             </ul>
@@ -299,7 +299,7 @@
     <section class="sidebar">
 
 
-{{ include('BikeDashboardBundle:sidebar:menu.html.twig') }} 
+{{ include('/sidebar/menu.html') }} 
 
     </section>
     <!-- /.sidebar -->
