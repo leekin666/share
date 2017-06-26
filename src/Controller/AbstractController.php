@@ -11,8 +11,6 @@ abstract class AbstractController
 {
     protected $container;
 
-    // protected $renderer;
-
     protected $db;
 
     protected $view;
@@ -24,14 +22,12 @@ abstract class AbstractController
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
-        // $this->renderer = $container->get('renderer');
         $this->db = $container->get('db');
         $this->view = $container->get('twig');
         $this->redis = $container->get('redis');
         $this->mongo = $container->get('mongodb');
     }
-
-
+   
 
     public function __invoke(Request $request)
     {

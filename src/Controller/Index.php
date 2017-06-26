@@ -5,7 +5,7 @@ namespace Bike\Controller;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class Index extends AbstractController
+class Index extends Common
 {
 
     public function index(Request $request, Response $response)
@@ -16,7 +16,8 @@ class Index extends AbstractController
 
     public function login(Request $request, Response $response)
     {
-        return $this->view->render('Index/login.html');
+        $data = array();
+        return $this->view->render('index.html',$data);
     }
 
     public function getAdmin(Request $request, Response $response)
